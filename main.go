@@ -33,6 +33,8 @@ func main() {
 		log.Fatal(err)
 	}
 
+	fmt.Printf("input %v\n", input)
+
 	// Execute the prepared query.
 	rs, err := query.Eval(ctx, rego.EvalInput(input))
 	if err != nil {
